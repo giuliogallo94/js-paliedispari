@@ -3,3 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  text-align: center;
+}
+
+.container {
+  height: 90vh;
+  margin: 5vh auto;
+}
+
+h1 {
+  color: white;
+  background-color: green;
+  line-height: 90vh;
+}

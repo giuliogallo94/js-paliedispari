@@ -1,4 +1,5 @@
-let userChoice = prompt("Scegli pari o dispari?");
+let oddOrEven = prompt("Scegli pari o dispari?");
+let userChoice = oddOrEven.toLowerCase();
 console.log(userChoice);
 
 let userNumber = parseInt(prompt("Scegli un numero da 1 a 5"));
@@ -12,22 +13,24 @@ function genarateRandomNumber(min, max) {
   return rndNumber;
 }
 
-let numberType = oddEven(userNumber, pcNumber);
-console.log(result);
-
 function oddEven(x, y) {
   const sum = x + y;
-
+  let result = "";
   if (sum % 2 === 0) {
     result = "pari";
   } else {
     result = "dispari";
   }
-}
 
-if (result === userChoice) {
-  finalMessage = "L'utente ha vinto";
+  return result;
+}
+let numberType = oddEven(userNumber, pcNumber);
+
+if (numberType === userChoice) {
+  finalMessage = "L'utente Vince";
 } else {
-  finalMessage = "L'utente ha perso";
+  finalMessage = "PC Vince";
 }
 console.log(finalMessage);
+
+document.querySelector("h1").innerHTML = finalMessage;
