@@ -5,6 +5,11 @@ console.log(userChoice);
 let userNumber = parseInt(prompt("Scegli un numero da 1 a 5"));
 console.log(userNumber);
 
+while (userNumber > 5 || userNumber < 1) {
+  userNumber = parseInt(prompt("Scegli un numero da 1 a 5"));
+  console.log(userNumber);
+}
+
 const pcNumber = genarateRandomNumber(1, 5);
 console.log(pcNumber);
 
@@ -24,6 +29,7 @@ function oddEven(x, y) {
 
   return result;
 }
+
 let numberType = oddEven(userNumber, pcNumber);
 
 if (numberType === userChoice) {
